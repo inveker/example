@@ -81,6 +81,8 @@ contract StakingProgramm is Ownable {
             false
         );
 
+        userStakingIds[msg.sender].push(stakingId);
+
         emit Stake(stakingsById[stakingId]);
     }
 
